@@ -38,7 +38,8 @@ export default class AppForm extends React.Component {
     };
 
     axios.post(`https://eur.ninjainnovations.com/public/api/request/add`, { 
-      body })
+      body },
+      { crossdomain: true })
       .then(res => {
         console.log(res);
         console.log(res.data);
