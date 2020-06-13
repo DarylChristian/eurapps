@@ -13,6 +13,7 @@ import Footer from './Footer';
 import Terms from './Terms';
 import AppList from './AppList';
 import AppForm from './AppForm';
+import Submitted from './Submitted';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -100,6 +101,7 @@ export default function LicenseManager() {
       <Route path="/" exact component={AppList} />
       <Route path="/terms/:id" exact component={Terms} />
       <Route path="/app/:id" exact component={AppForm} />
+      <Route path="/submitted" exact component={Submitted} />
       </Container>
       {/* <Route path="/" exact component={} /> */}
       {/* Footer */}

@@ -1,12 +1,14 @@
 import React from "react";
 import axios from "axios";
 import FormControl from "@material-ui/core/FormControl";
-import { Button, TextField, Typography, Grid } from "@material-ui/core";
+import { Button, TextField, Typography, Grid, CircularProgress } from "@material-ui/core";
+import { Redirect, withRouter } from 'react-router-dom';
 
-export default class AppForm extends React.Component {
+class AppForm extends React.Component {
   state = {
     errors: true,
     eidField: "",
+    alreadyPressed: false,
   };
 
   handleTextFieldChange = (e) => {
@@ -19,13 +21,11 @@ export default class AppForm extends React.Component {
     } else {
       this.setState({ errors: true });
     }
-
-    console.log(eidField.length);
   };
 
   handleSubmit = (event) => {
-    console.log("submited");
     event.preventDefault();
+    this.setState({alreadyPressed: true});
 
     var form = new FormData();
 form.append("appId", this.props.match.params.id);
@@ -43,8 +43,10 @@ form.append("eid", this.state.eidField);
         axiosConfig
       )
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        console.log(res.data.notice.text);
+        if(res.data.notice.text === "request added"){
+          this.props.history.push("/submitted");
+        }
       });
 
      /*  const requestOptions = {
@@ -62,9 +64,14 @@ form.append("eid", this.state.eidField);
 
   };
   render() {
-    const { errors, eidField } = this.state;
+    const { errors, eidField, alreadyPressed } = this.state;
     /* console.log(eidField)
 console.log(errors) */
+if(alreadyPressed) {
+  return (
+  <div style={{display: "flex", justifyContent:'center'}}><CircularProgress /></div>
+  )
+}
     return (
       <div>
         <div style={classes.textHeader}>
@@ -93,7 +100,7 @@ console.log(errors) */
                     variant="contained"
                     color="primary"
                     type="submit"
-                    disabled={errors}
+                    disabled={errors || alreadyPressed }
                   >
                     Submit
                   </Button>
@@ -130,3 +137,5 @@ const classes = {
     alignSelf: "center",
   },
 };
+
+export default withRouter(AppForm);
