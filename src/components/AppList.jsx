@@ -35,6 +35,11 @@ const classes  = {
   textHeader: {
     marginBottom: 40,
   },
+  cardPricing: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  }
 };
 
 export default class AppList extends React.Component {
@@ -123,7 +128,7 @@ export default class AppList extends React.Component {
                 className={classes.cardHeader}
               />
               <CardContent>
-                <div className={classes.cardPricing}>
+                <div style={classes.cardPricing}>
                   <img
                     className={classes.appLogo}
                     src={tier.image}
@@ -209,7 +214,7 @@ const tiers = [
     title: "Codility",
     image: codility,
     description: ["skills assessment platform"],
-    buttonText: "Sign up",
+    buttonText: "Request",
     buttonVariant: "outlined",
   },
 ];

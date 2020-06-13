@@ -126,7 +126,7 @@ const classes = {
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    minWidth: 500,
+    minWidth: 350,
   },
   buttonCon: {
     marginTop: 50,

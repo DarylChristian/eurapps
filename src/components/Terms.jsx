@@ -77,10 +77,6 @@ const terms = [
   "Do not share the app password to anyone.",
   "Booking of this app is first come first serve only.",
   "Sign-up only if you already know the meeting details (date, attendees, etc).",
-  "No client information should be shared in this app.",
-  "Do not share the app password to anyone.",
-  "Booking of this app is first come first serve only.",
-  "Sign-up only if you already know the meeting details (date, attendees, etc).",
   "Password changes every month."
 ];
 
