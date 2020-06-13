@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Redirect } from 'react-router-dom';
 
 
 
@@ -96,6 +96,7 @@ export default function LicenseManager() {
       </Container>
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
+      {/* <Route path="/" exact component={() => <Redirect to="/home" />} /> */}
       <Route path="/" exact component={AppList} />
       <Route path="/terms/:id" exact component={Terms} />
       <Route path="/app/:id" exact component={AppForm} />
