@@ -19,7 +19,7 @@ import kahoot from "./imgs/kahoot.png";
 import canva from "./imgs/canva.png";
 import menti from "./imgs/menti.png";
 import powtoon from "./imgs/powtoon.png";
-import codility from "./imgs/codility.png";
+import mer from "./imgs/mer.png";
 
 const tiers = [
   {
@@ -64,9 +64,9 @@ const tiers = [
   },
   {
     id: 5,
-    title: "Codility",
-    image: codility,
-    description: ["skills assessment platform"],
+    title: "Mystery Escape Room",
+    image: mer,
+    description: ["virtual escape rooms"],
     buttonText: "Sign up",
     buttonVariant: "outlined",
   },

@@ -16,7 +16,7 @@ import kahoot from "./imgs/kahoot.png";
 import canva from "./imgs/canva.png";
 import menti from "./imgs/menti.png";
 import powtoon from "./imgs/powtoon.png";
-import codility from "./imgs/codility.png";
+import mer from "./imgs/mer.png";
 
 const classes  = {
   "@global": {
@@ -39,7 +39,9 @@ const classes  = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-  }
+    height: 220,
+    width: 220,
+  },
 };
 
 export default class AppList extends React.Component {
@@ -87,9 +89,9 @@ export default class AppList extends React.Component {
       },
       {
         id: 5,
-        title: "Codility",
-        image: codility,
-        description: ["skills assessment platform"],
+        title: "Mystery Escape Room",
+        image: mer,
+        description: ["virtual escape rooms"],
         buttonText: "Sign up",
         buttonVariant: "outlined",
       },
@@ -167,54 +169,3 @@ export default class AppList extends React.Component {
     );
   }
 }
-
-const tiers = [
-  {
-    id: 0,
-    title: "Zoom",
-    image: zoom,
-    description: ["Video conferencing app"],
-    buttonText: "Sign up",
-    buttonVariant: "outlined",
-  },
-  {
-    id: 1,
-    title: "Kahoot",
-    image: kahoot,
-    description: ["Online platform for games"],
-    buttonText: "Sign up",
-    buttonVariant: "outlined",
-  },
-  {
-    id: 2,
-    title: "Canva",
-    image: canva,
-    description: ["designing platform"],
-    buttonText: "Sign up",
-    buttonVariant: "outlined",
-  },
-  {
-    id: 3,
-    title: "Menti",
-    image: menti,
-    description: ["online survey platform"],
-    buttonText: "Sign up",
-    buttonVariant: "outlined",
-  },
-  {
-    id: 4,
-    title: "Powtoon",
-    image: powtoon,
-    description: ["video creation tool"],
-    buttonText: "Sign up",
-    buttonVariant: "outlined",
-  },
-  {
-    id: 5,
-    title: "Codility",
-    image: codility,
-    description: ["skills assessment platform"],
-    buttonText: "Request",
-    buttonVariant: "outlined",
-  },
-];
